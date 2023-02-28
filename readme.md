@@ -1,6 +1,6 @@
 # Jai wgpu_native Bindings
 
-WIP Jai Bindings for wgpu_native.
+WIP Jai Bindings for [wgpu_native](https://github.com/gfx-rs/wgpu-native).
 
 # Hello Triangle
 **Warning: this example is far from being polished!**
