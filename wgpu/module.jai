@@ -6,6 +6,6 @@
 
 size_t  :: u64;
 
-#if OS == .WINDOWS  libwgpu :: #library "win/libwgpu";
-#if OS == .MACOS    libwgpu :: #library "mac/libwgpu";
-#if OS == .LINUX    libwgpu :: #library "linux/libwgpu";
+#if OS == .WINDOWS  libwgpu :: #library "win/wgpu_native";
+#if OS == .MACOS    libwgpu :: #library "mac/wgpu_native";
+#if OS == .LINUX    libwgpu :: #library "linux/wgpu_native";
