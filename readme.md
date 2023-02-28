@@ -23,4 +23,4 @@ SDL_Metal_GetLayer :: (metal_view: *SDL_MetalView) -> *void #foreign SDL2;
 
 Into `modules/SDL/SDL_render.jai` after line 100. 
 
-You will also need the newest SDL2 dylib the one shipped with the Jai compiler is older (as of 28.2.2023).
+You will also need the newest SDL2 dylib the one shipped with the Jai compiler is too old (as of 28.2.2023).
