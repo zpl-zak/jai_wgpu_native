@@ -5,7 +5,7 @@ WIP Jai Bindings for [wgpu_native](https://github.com/gfx-rs/wgpu-native).
 # Hello Triangle
 **Warning: this example is far from being polished!**
 
-- Put `wgpu` folder in your module folder.
+- Put `wgpu` folder in your module folder
 - Compile with `jai main.jai`
 - Run `bin/jai_wgpu`
 
