@@ -16,6 +16,7 @@ I don´t have a Linux machine so the linux surface creation is not done. PR welc
 You need to add two extra bindings intro SDL module for Metal. Insert:
 
 ```c++
+SDL_MetalView :: struct{}
 SDL_Metal_CreateView :: (window: *SDL_Window) -> *SDL_MetalView #foreign SDL2;
 SDL_Metal_GetLayer :: (metal_view: *SDL_MetalView) -> *void #foreign SDL2;
 ```
