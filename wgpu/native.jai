@@ -1106,8 +1106,8 @@ ProcCommandEncoderWriteTimestamp :: #type (a0: CommandEncoder, a1: QuerySet, a2:
 
 // Procs of ComputePassEncoder
 ProcComputePassEncoderBeginPipelineStatisticsQuery :: #type (a0: ComputePassEncoder, a1: QuerySet, a2: u32) -> void #c_call;
-ProcComputePassEncoderDispatch :: #type (a0: ComputePassEncoder, a1: u32, a2: u32, a3: u32) -> void #c_call;
-ProcComputePassEncoderDispatchIndirect :: #type (a0: ComputePassEncoder, a1: Buffer, a2: u64) -> void #c_call;
+ProcComputePassEncoderDispatchWorkgroups :: #type (a0: ComputePassEncoder, a1: u32, a2: u32, a3: u32) -> void #c_call;
+ProcComputePassEncoderDispatchWorkgroupsIndirect :: #type (a0: ComputePassEncoder, a1: Buffer, a2: u64) -> void #c_call;
 ProcComputePassEncoderEnd :: #type (a0: ComputePassEncoder) -> void #c_call;
 ProcComputePassEncoderEndPipelineStatisticsQuery :: #type (a0: ComputePassEncoder) -> void #c_call;
 ProcComputePassEncoderInsertDebugMarker :: #type (a0: ComputePassEncoder, a1: *u8) -> void #c_call;
@@ -1240,8 +1240,8 @@ CommandEncoderCopyTextureToBuffer :: (commandEncoder: CommandEncoder, source: *I
 CommandEncoderCopyTextureToTexture :: (commandEncoder: CommandEncoder, source: *ImageCopyTexture, destination: *ImageCopyTexture, copySize: *Extent3D) -> void #foreign libwgpu "wgpuCommandEncoderCopyTextureToTexture";
 CommandEncoderFinish :: (commandEncoder: CommandEncoder, descriptor: *CommandBufferDescriptor) -> CommandBuffer #foreign libwgpu "wgpuCommandEncoderFinish";
 
-ComputePassEncoderDispatch :: (computePassEncoder: ComputePassEncoder, workgroupCountX: u32, workgroupCountY: u32, workgroupCountZ: u32) -> void #foreign libwgpu "wgpuComputePassEncoderDispatch";
-ComputePassEncoderDispatchIndirect :: (computePassEncoder: ComputePassEncoder, indirectBuffer: Buffer, indirectOffset: u64) -> void #foreign libwgpu "wgpuComputePassEncoderDispatchIndirect";
+ComputePassEncoderDispatchWorkgroups :: (computePassEncoder: ComputePassEncoder, workgroupCountX: u32, workgroupCountY: u32, workgroupCountZ: u32) -> void #foreign libwgpu "wgpuComputePassEncoderDispatchWorkgroups";
+ComputePassEncoderDispatchWorkgroupsIndirect :: (computePassEncoder: ComputePassEncoder, indirectBuffer: Buffer, indirectOffset: u64) -> void #foreign libwgpu "wgpuComputePassEncoderDispatchWorkgroupsIndirect";
 ComputePassEncoderEnd :: (computePassEncoder: ComputePassEncoder) -> void #foreign libwgpu "wgpuComputePassEncoderEnd";
 
 ComputePassEncoderSetBindGroup :: (computePassEncoder: ComputePassEncoder, groupIndex: u32, group: BindGroup, dynamicOffsetCount: u32, dynamicOffsets: *u32) -> void #foreign libwgpu "wgpuComputePassEncoderSetBindGroup";
